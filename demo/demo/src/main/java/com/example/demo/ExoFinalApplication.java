@@ -1,13 +1,12 @@
 package com.example.demo;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+@RestController
+public class DemoMVCController {
 
-@SpringBootApplication
-public class ExoFinalApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ExoFinalApplication.class, args);
-	}
-
+    @GetMapping("/message")
+    public String displayMessage() {
+        return "Hello Ynov";
+    }
 }
